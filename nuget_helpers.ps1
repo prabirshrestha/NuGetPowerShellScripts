@@ -60,6 +60,10 @@
 		return $project.DTE
 	}
 
+	function Get-Solution($project){
+		return $project.DTE.solution
+	}
+
 	function DteBrowserNavigate($project, $url){
 		# open the browser inside visual studio and navigate to the specified url.
 		$project.DTE.ItemOperations.Navigate($url)  
