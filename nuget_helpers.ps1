@@ -69,6 +69,11 @@
 		$project.DTE.solution.solutionbuild.activeconfiguration.Name
 	}
 
+	function Get-ActiveConfigurationPlatformName($project){
+		# Mixed Platforms/x86
+		$project.DTE.solution.solutionbuild.activeconfiguration.PlatformName
+	}
+
 	function DteBrowserNavigate($project, $url){
 		# open the browser inside visual studio and navigate to the specified url.
 		$project.DTE.ItemOperations.Navigate($url)  
