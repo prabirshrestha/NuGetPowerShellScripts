@@ -43,3 +43,8 @@
 	function Get-ProjectReferences($project){
 		return $project.Object.References
 	}
+
+	function DteBrowserNavigate($project,$url){
+		# open the browser inside visual studio and navigate to the specified url.
+		$project.DTE.ItemOperations.Navigate($url)  
+	}
