@@ -64,6 +64,11 @@
 		return $project.DTE.solution
 	}
 
+	function Get-ActiveConfigurationName($project){
+		# Debug/Release
+		$project.DTE.solution.solutionbuild.activeconfiguration.Name
+	}
+
 	function DteBrowserNavigate($project, $url){
 		# open the browser inside visual studio and navigate to the specified url.
 		$project.DTE.ItemOperations.Navigate($url)  
