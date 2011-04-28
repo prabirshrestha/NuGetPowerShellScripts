@@ -56,7 +56,11 @@
 		return [System.IO.Path]::GetDirectoryName($project.FullName)
 	}
 
-	function DteBrowserNavigate($project,$url){
+	function Get-Dte($project){
+		return $project.DTE
+	}
+
+	function DteBrowserNavigate($project, $url){
 		# open the browser inside visual studio and navigate to the specified url.
 		$project.DTE.ItemOperations.Navigate($url)  
 	}
