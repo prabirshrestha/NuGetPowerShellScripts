@@ -52,6 +52,10 @@
 		$project.Object.References | Where-Object { $_.Name -eq $dllName } | ForEach-Object { $_.Remove() }
 	}
 
+	function Get-ProjectDir($project){
+		return [System.IO.Path]::GetDirectoryName($project.FullName)
+	}
+
 	function DteBrowserNavigate($project,$url){
 		# open the browser inside visual studio and navigate to the specified url.
 		$project.DTE.ItemOperations.Navigate($url)  
