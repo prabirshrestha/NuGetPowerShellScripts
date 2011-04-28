@@ -44,6 +44,10 @@
 		return $project.Object.References
 	}
 
+	function Add-ProjectReference($project, $dllName){
+		$project.Object.References.Add($dllName)
+	}
+
 	function DteBrowserNavigate($project,$url){
 		# open the browser inside visual studio and navigate to the specified url.
 		$project.DTE.ItemOperations.Navigate($url)  
