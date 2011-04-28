@@ -39,3 +39,7 @@
 	function Is-WindowsPhone($frameworkName){
 		return $frameworkName.Profile -eq "WindowsPhone"
 	}
+
+	function Get-ProjectReferences($project){
+		return $project.Object.References
+	}
